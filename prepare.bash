@@ -36,7 +36,7 @@ wget --load-cookies /tmp/cookies.txt \
 "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1LFYNBGrU7u48DMhBsks_HF1K3CP4ka3S' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1LFYNBGrU7u48DMhBsks_HF1K3CP4ka3S" \
 -O /home/tibero/tibero6/license/license.xml && rm -rf /tmp/cookies.txt
 mkdir /home/tibero/tibero6/database
-chwon -R tibero:dba /home/tibero/tibero6/database
+chown -R tibero:dba /home/tibero/tibero6/database
 chown tibero:dba /home/tibero/tibero6/license/license.xml 
 
 output "--- ENTRYPOINT start.bash to tibero HOME  ---"
